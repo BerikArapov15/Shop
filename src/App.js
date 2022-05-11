@@ -7,11 +7,13 @@ import Product from "./component/Product";
 import Cart from "./component/Cart";
 import About from "./component/About";
 import Contact from "./component/Contact";
+import Footer from "./component/Footer";
 
 function App() {
   return (
     <>
       <Navbar />
+     
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/products" component={Products} />
@@ -20,6 +22,7 @@ function App() {
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/about" component={About} />
       </Switch>
+       <Footer/>
     </>
   );
 }
