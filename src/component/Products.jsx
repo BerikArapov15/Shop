@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
+import { JSON_API_PRODUCTS } from "../helpers/consts";
+
 
 const Products = () => {
   const [data, setData] = useState([]);
@@ -11,13 +13,14 @@ const Products = () => {
   useEffect(() => {
     const getProducts = async () => {
       setLoading(true);
-      const response = await fetch("https://fakestoreapi.com/products");
+      const response = await fetch(`${JSON_API_PRODUCTS}`);
       if (componentMounted) {
         setData(await response.clone().json());
         setFilter(await response.json());
         setLoading(false);
         console.log(filter);
       }
+    
 
       return () => {
         componentMounted = false;
@@ -26,6 +29,8 @@ const Products = () => {
 
     getProducts();
   }, []);
+  
+
 
   const Loading = () => {
     return (
@@ -42,6 +47,7 @@ const Products = () => {
         <div className="col-md-3">
             <Skeleton height={350}/>
         </div>
+        
     </>
     );
   };
@@ -60,9 +66,12 @@ const Products = () => {
           <button className="btn btn-outline-dark me-2" onClick={()=>filterProduct("women's clothing")}>
             Women's Clothing
           </button>
+          
+        
           <button className="btn btn-outline-dark me-2" onClick={()=>filterProduct("jewelery")}>Jewelery</button>
           <button className="btn btn-outline-dark me-2" onClick={()=>filterProduct("electronics")}>Electronic</button>
         </div>
+  
         {filter.map((product) => {
           return (
             <>
@@ -83,6 +92,8 @@ const Products = () => {
             </>
           );
         })}
+
+
       </>
     );
   };

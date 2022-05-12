@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { Box } from "@mui/material";
+import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
+import { authContext, useAuth } from "../contexts/AuthContextProvider";
+
 
 const Navbar = () => {
+console.log(useContext(authContext));
+    const {
+      handleLogout,
+      user: { email },
+    } = useContext(authContext);
+
     const state = useSelector((state)=> state.handleCart)
   return (
     <div>
@@ -44,12 +55,28 @@ const Navbar = () => {
                   Contact
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/admin">
+                  Admin
+                </NavLink>
+              </li>
             </ul>
             <div className="buttons">
-                <NavLink to="/login" className="btn btn-outline-dark">
-                   <i className="fa fa-sign-in me-1"></i> Login</NavLink>
-                <NavLink to="/register" className="btn btn-outline-dark ms-2">
-                   <i className="fa fa-user-plus me-1"></i> Register</NavLink>
+                    <Box sx={{ flexGrow: 0 }}>
+                      {email ? (
+                        <Button
+                          sx={{ color: 'black', fontWeight: 'bold' }}
+                          onClick={handleLogout}
+                        >
+                          LOGOUT
+                        </Button>
+                      ) : (
+                      <NavLink to="/auth" className="btn btn-outline-dark">
+                      <i className="fa fa-sign-in me-2"></i> Login</NavLink>
+                      )}
+                    </Box>
+                {/* <NavLink to="/register" className="btn btn-outline-dark ms-2">
+                   <i className="fa fa-user-plus me-1"></i> Register</NavLink> */}
                 <NavLink to="/cart" className="btn btn-outline-dark ms-2">
                    <i className="fa fa-shopping-cart me-1"></i> Cart ({state.length})</NavLink>
             </div>

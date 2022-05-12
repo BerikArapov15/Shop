@@ -43,7 +43,7 @@ const Footer = () => {
               </Grid>
             </Grid>
 
-            <Grid item xs={3} sm={3}>
+            {/* <Grid item xs={3} sm={3}>
               <Grid pt={3} mt={5}>
                 <Typography variant="h6" sx={{ color: '#9999A6' }}>
                   We Using
@@ -80,7 +80,7 @@ const Footer = () => {
                   alt=""
                 />
               </Grid>
-            </Grid>
+            </Grid> */}
 
             <Grid
               item

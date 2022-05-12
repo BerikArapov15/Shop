@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, } from 'react';
 import { useDispatch } from 'react-redux';
 import { addCart } from '../redux/action';
 import { useParams } from 'react-router';
@@ -25,6 +25,7 @@ const Product = () => {
         }
         getProduct();
     }, []);
+   
 
     const Loading = () => {
         return(
@@ -70,6 +71,7 @@ const Product = () => {
                         Go to Cart
                     </NavLink>
                 </div>
+              
             </>
         )
     }
