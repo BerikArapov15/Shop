@@ -73,7 +73,6 @@ const Home = () => {
   </Carousel.Item>
 </Carousel>
       <Products/>
-      <Products/>
     </div>
   );
 };

@@ -61,7 +61,7 @@ console.log(useContext(authContext));
                 </NavLink>
               </li>
             </ul>
-            <div className="buttons">
+            <div className="buttons d-flex justify-content-start">
                     <Box sx={{ flexGrow: 0 }}>
                       {email ? (
                         <Button
@@ -78,7 +78,8 @@ console.log(useContext(authContext));
                 {/* <NavLink to="/register" className="btn btn-outline-dark ms-2">
                    <i className="fa fa-user-plus me-1"></i> Register</NavLink> */}
                 <NavLink to="/cart" className="btn btn-outline-dark ms-2">
-                   <i className="fa fa-shopping-cart me-1"></i> Cart ({state.length})</NavLink>
+                   <i className="fa fa-shopping-cart me-1 "></i> Cart ({state.length})
+                </NavLink>
             </div>
           </div>
         </div>

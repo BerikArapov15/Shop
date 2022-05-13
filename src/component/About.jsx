@@ -102,7 +102,7 @@ export default function AboutUs() {
                     component="img"
                     sx={{ width: '70%', heigth: '60%' }}
                     image="https://images.unsplash.com/photo-1529338296731-c4280a44fc48?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGVsZWN0cm9uaWN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-                    alt="JAWS"
+                    alt="Shop"
                     ml={8}
                   />
                 </Grid>
