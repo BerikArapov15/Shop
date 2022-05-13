@@ -8,9 +8,10 @@ import Cart from "./component/Cart";
 import About from "./component/About";
 import Contact from "./component/Contact";
 import Footer from "./component/Footer";
-import AdminPage from "./component/AdminPage";
 import Auth from "./component/Auth";
 import AuthContextProvider from "./contexts/AuthContextProvider";
+import  CreditCard from "./component/CreditCard";
+import { Pagination } from "@mui/material";
 
 function App() {
   return (
@@ -24,10 +25,12 @@ function App() {
           <Route exact path="/cart" component={Cart} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/about" component={About} />
-          <Route exact path="/admin" component={AdminPage} />
           <Route exact path="/auth" component={Auth} />
+          <Route exact path="/card" component={CreditCard} />
         </Switch>
+        <Pagination/>
         <Footer/>
+
        </AuthContextProvider>
 
   

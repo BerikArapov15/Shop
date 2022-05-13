@@ -52,14 +52,14 @@ console.log(useContext(authContext));
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/contact">
-                  Contact
+                Registration
                 </NavLink>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <NavLink className="nav-link" to="/admin">
                   Admin
                 </NavLink>
-              </li>
+              </li> */}
             </ul>
             <div className="buttons d-flex justify-content-start">
                     <Box sx={{ flexGrow: 0 }}>
