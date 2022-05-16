@@ -55,11 +55,7 @@ console.log(useContext(authContext));
                 Registration
                 </NavLink>
               </li>
-              {/* <li className="nav-item">
-                <NavLink className="nav-link" to="/admin">
-                  Admin
-                </NavLink>
-              </li> */}
+            
             </ul>
             <div className="buttons d-flex justify-content-start">
                     <Box sx={{ flexGrow: 0 }}>
@@ -75,8 +71,7 @@ console.log(useContext(authContext));
                       <i className="fa fa-sign-in me-2"></i> Login</NavLink>
                       )}
                     </Box>
-                {/* <NavLink to="/register" className="btn btn-outline-dark ms-2">
-                   <i className="fa fa-user-plus me-1"></i> Register</NavLink> */}
+
                 <NavLink to="/cart" className="btn btn-outline-dark ms-2">
                    <i className="fa fa-shopping-cart me-1 "></i> Cart ({state.length})
                 </NavLink>
